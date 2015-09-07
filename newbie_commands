@@ -11,15 +11,15 @@ if len(answer) > 0:
 
 
 wrong_answers = {'mkdir' : 'Oops. That\'s wrong. mkdir creates a new directory',
-					'echo' : 'Oops. That\'s wrong. echo prints some arguments',
-					'cat' : 'Oops. That\'s wrong. cat prints the whole file',
-					'cd' : 'Oops. That\'s wrong. cd means change directory',
-					'ls' : 'Oops. That\'s wrong. ls means list directory',
-					'pwd' : 'Oops. That\'s wrong. pwd means print working directory',
-					'xargs' : 'Oops. That\'s wrong. xargs means execute the arguments',
-					'hostname' : 'Oops. That\'s wrong. hostname is the computer\'s network name',
-					'rmdir' : 'Oops. That\'s wrong. rmdir means remove directory',
-					'man' : 'Oops. That\'s wrong. man means read a manual page'}
+		'echo' : 'Oops. That\'s wrong. echo prints some arguments',
+		'cat' : 'Oops. That\'s wrong. cat prints the whole file',
+		'cd' : 'Oops. That\'s wrong. cd means change directory',
+		'ls' : 'Oops. That\'s wrong. ls means list directory',
+		'pwd' : 'Oops. That\'s wrong. pwd means print working directory',
+		'xargs' : 'Oops. That\'s wrong. xargs means execute the arguments',
+		'hostname' : 'Oops. That\'s wrong. hostname is the computer\'s network name',
+		'rmdir' : 'Oops. That\'s wrong. rmdir means remove directory',
+		'man' : 'Oops. That\'s wrong. man means read a manual page'}
 
 
 question1 = raw_input("Does mkdir a) create a new directory, or b) make a delivery?")

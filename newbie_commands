@@ -10,139 +10,96 @@ if len(answer) > 0:
 	print "Nice to meet you, " + answer + "!" + " Let's play!"
 
 
+wrong_answers = {'mkdir' : 'Oops. That\'s wrong. mkdir creates a new directory',
+					'echo' : 'Oops. That\'s wrong. echo prints some arguments',
+					'cat' : 'Oops. That\'s wrong. cat prints the whole file',
+					'cd' : 'Oops. That\'s wrong. cd means change directory',
+					'ls' : 'Oops. That\'s wrong. ls means list directory',
+					'pwd' : 'Oops. That\'s wrong. pwd means print working directory',
+					'xargs' : 'Oops. That\'s wrong. xargs means execute the arguments',
+					'hostname' : 'Oops. That\'s wrong. hostname is the computer\'s network name',
+					'rmdir' : 'Oops. That\'s wrong. rmdir means remove directory',
+					'man' : 'Oops. That\'s wrong. man means read a manual page'}
+
+
 question1 = raw_input("Does mkdir a) create a new directory, or b) make a delivery?")
 
 if question1 == "a":
 	print "Correct! Good job!"
-
-elif question1 != "a":
-	print "Oops. That's wrong. mkdir makes a new directory."
-
-next1 = raw_input("To see question two, type: echo")
-
-if next1 == "echo" or next1 != "echo":
-	print "Question 2..."
+else:
+	print (wrong_answers['mkdir'])
 
 
 question2 = raw_input("Does echo a) increase your computer volume, or b) print some arguments?")
 
 if question2 == "b":
 	print "Correct! Good job!"
-
-elif question2 != "b":
-	print "Oops. That's wrong. echo prints some arguments."
-
-next2 = raw_input("To see question three, type: cat")
-
-if next2 == "cat" or next2 != "cat":
-	print "Question 3..."
+else:
+	print (wrong_answers['echo'])
 
 
 question3 = raw_input("Does cat a) call a category, or b) prints the whole file?")
 
 if question3 == "b":
 	print "Correct! Good job!"
-
-elif question3 != "b":
-	print "Oops. That's wrong. cat prints the whole file."
-
-next3 = raw_input("To see question four, type: cd")
-
-if next3 == "cd" or next3 != "cd":
-	print "Question 4..."
+else:
+	print (wrong_answers['cat'])
 
 
 question4 = raw_input("Does cd mean a) change directory, or b) compact disc?")
 
 if question4 == "a":
 	print "Correct! Good job!"
-
-elif question4 != "a":
-	print "Oops. That's wrong. cd means change directory."
-
-next4 = raw_input("To see question five, type: ls")
-
-if next4 == "ls" or next4 != "ls":
-	print "Question 5..."
+else:
+	print (wrong_answers['cd'])
 
 
 question5 = raw_input("Does ls mean a) lost system, or b) list directory?")
 
 if question5 == "b":
 	print "Correct! Good job!"
-
-elif question5 != "b":
-	print "Oops. That's wrong. ls means list directory."
-
-next5 = raw_input("To see question six, type: pwd")
-
-if next5 == "pwd" or next5 != "pwd":
-	print "Question 6..."
+else:
+	print (wrong_answers['ls'])
 
 
 question6 = raw_input("Does pwd mean a) password, or b) print working directory?")
 
 if question6 == "b":
 	print "Correct! Good job!"
-
-elif question6 != "b":
-	print "Oops. That's wrong. pwd means print working directory."
-
-next6 = raw_input("To see question seven, type: xargs")
-
-if next6 == "xargs" or next6 != "xargs":
-	print "Question 7..."
+else:
+	print (wrong_answers['pwd'])
 
 
 question7 = raw_input("Does xargs mean a) delete the arguments, or b) execute the arguments?")
 
 if question7 == "b":
 	print "Correct! Good job!"
-
-elif question7 != "b":
-	print "Oops. That's wrong. xargs means execute the arguments."
-
-next7 = raw_input("To see question eight, type: hostname")
-
-if next7 == "hostname" or next7 != "hostname":
-	print "Question 8..."
+else:
+	print (wrong_answers['xargs'])
 
 
 question8 = raw_input("Does hostname mean a) the computer's network name, or b) the encrypted wifi name?")
 
 if question8 == "a":
 	print "Correct! Good job!"
-
-elif question8 != "a":
-	print "Oops. That's wrong. hostname is the computer's network name."
-
-next8 = raw_input("To see question nine, type: rmdir")
-
-if next8 == "rmdir" or next8 != "rmdir":
-	print "Question 9..."
+else:
+	print (wrong_answers['xargs'])
 
 
 question9 = raw_input("Does rmdir mean a) repair directory, or b) remove directory?")
 
 if question9 == "b":
 	print "Correct! Good job!"
-
-elif question9 != "b":
-	print "Oops. That's wrong. rmdir means remove directory."
-
-next9 = raw_input("To see the last question, type: man")
-
-if next9 == "man" or next9 != "man":
-	print "Last question!..."
+else:
+	print (wrong_answers['rmdir'])
 
 
 question10 = raw_input("Does man mean a) manipulate the variable, or b) read a manual page?")
 
 if question10 == "b":
 	print "Correct! Good job!"
-
-elif question10 != "b":
-	print "Oops. That's wrong. man means read a manual page."
+else:
+	print (wrong_answers['man'])
 
 print "Thank you for playing " + answer + "!"
 

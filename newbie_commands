@@ -9,66 +9,79 @@ answer = raw_input("what is your name? ")
 if len(answer) > 0:
 	print "Nice to meet you, " + answer + "!" + " Let's play!"
 
+info = {
+    'mkdir': {
+      'prompt': 'Does mkdir a) create a new directory, or b) make a delivery?',
+      'answer': 'a',
+      'wrong_answer': 'Oops. That\'s wrong. mkdir creates a new directory'
+      },
+    'echo' : {
+      'prompt': 'Does echo a) increase your computer volume, or b) print some arguments?',
+      'answer': 'b',
+      'wrong_answer': 'Oops. That\'s wrong. echo prints some arguments'
+      },
+    'xargs': {
+      'prompt': 'Does xargs mean a) delete the arguments, or b) execute the arguments?',
+      'answer': 'b',
+      'wrong_answer' : 'Oops. That\'s wrong. xargs means execute the arguments'
+      },
+    'cat' : {
+      'prompt': 'Does cat a) call a category, or b) prints the whole file?',
+      'answer': 'b',
+      'wrong_answer': 'Oops. That\'s wrong. cat prints the whole file'
+      },
+    'pwd': {
+      'prompt': 'Does pwd mean a) password, or b) print working directory?',
+      'answer': 'b',
+      'wrong_answer': 'Oops. That\'s wrong. pwd means print working directory'
+      },
+    'ls': {
+      'prompt': 'Does ls mean a) lost system, or b) list directory?',
+      'answer': 'b',
+      'wrong_answer': 'Oops. That\'s wrong. ls means list directory'
+      },
+    'cd' : {
+      'prompt': 'Does cd mean a) change directory, or b) compact disc?',
+      'answer': 'a',
+      'wrong_answer': 'Oops. That\'s wrong. cd means change directory'
+      },
+    'hostname' : {
+      'prompt': 'Does hostname mean a) the computer\'s network name, or b) the encrypted wifi name?',
+      'answer': 'a',
+      'wrong_answer': 'Oops. That\'s wrong. hostname is the computer\'s network name'
+      },
+    'rmdir' : {
+      'prompt': 'Does rmdir mean a) repair directory, or b) remove directory?',
+      'answer': 'b',
+      'wrong_answer': 'Oops. That\'s wrong. rmdir means remove directory'
+      },
+    'man' : {
+      'prompt': 'Does man mean a) manipulate the variable, or b) read a manual page?',
+      'answer':  'b',
+      'wrong_answer': 'Oops. That\'s wrong. man means read a manual page'
+      },
+    }
 
-wrong_answers = {'mkdir' : 'Oops. That\'s wrong. mkdir creates a new directory',
-		'echo' : 'Oops. That\'s wrong. echo prints some arguments',
-		'cat' : 'Oops. That\'s wrong. cat prints the whole file',
-		'cd' : 'Oops. That\'s wrong. cd means change directory',
-		'ls' : 'Oops. That\'s wrong. ls means list directory',
-		'pwd' : 'Oops. That\'s wrong. pwd means print working directory',
-		'xargs' : 'Oops. That\'s wrong. xargs means execute the arguments',
-		'hostname' : 'Oops. That\'s wrong. hostname is the computer\'s network name',
-		'rmdir' : 'Oops. That\'s wrong. rmdir means remove directory',
-		'man' : 'Oops. That\'s wrong. man means read a manual page'}
+def ask(command):
+    data = info[command]
+    question = raw_input(info[command]['prompt'] + ' ')
 
-def ask(prompt, answer, command):
-    question = raw_input(prompt + ' ')
-
-    if question == answer:
+    if question == info[command]['answer']:
             print "Correct! Good job!"
     else:
-            print (wrong_answers[command])
+            print info[command]['wrong_answer']
 
 
-ask("Does mkdir a) create a new directory, or b) make a delivery?",
-    "a",
-    "mkdir")
-
-ask("Does echo a) increase your computer volume, or b) print some arguments?",
-    "b",
-    "echo")
-
-ask("Does cat a) call a category, or b) prints the whole file?",
-    "b",
-    'cat')
-
-ask("Does cd mean a) change directory, or b) compact disc?",
-    "a",
-    'cd')
-
-ask("Does ls mean a) lost system, or b) list directory?",
-    "b",
-    'ls')
-
-ask("Does pwd mean a) password, or b) print working directory?",
-    "b",
-    'pwd')
-
-ask("Does xargs mean a) delete the arguments, or b) execute the arguments?",
-    "b",
-    'xargs')
-
-ask("Does hostname mean a) the computer's network name, or b) the encrypted wifi name?",
-    "a",
-    'xargs')
-
-ask("Does rmdir mean a) repair directory, or b) remove directory?",
-    "b",
-    'rmdir')
-
-ask("Does man mean a) manipulate the variable, or b) read a manual page?",
-    "b",
-    'man')
+ask('mkdir')
+ask('echo' )
+ask('xargs')
+ask('cat')
+ask('pwd')
+ask('ls')
+ask('cd')
+ask('hostname')
+ask('rmdir')
+ask('man')
 
 print "Thank you for playing " + answer + "!"
 

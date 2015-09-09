@@ -4,7 +4,7 @@ print "Welcome to Programming Commands for Newbies!"
 print "Learning these commands will make programming easy and fun!"
 print "Before we begin,"
 
-answer = raw_input("what is your name?")
+answer = raw_input("what is your name? ")
 
 if len(answer) > 0:
 	print "Nice to meet you, " + answer + "!" + " Let's play!"
@@ -21,85 +21,54 @@ wrong_answers = {'mkdir' : 'Oops. That\'s wrong. mkdir creates a new directory',
 		'rmdir' : 'Oops. That\'s wrong. rmdir means remove directory',
 		'man' : 'Oops. That\'s wrong. man means read a manual page'}
 
+def ask(prompt, answer, command):
+    question = raw_input(prompt + ' ')
 
-question1 = raw_input("Does mkdir a) create a new directory, or b) make a delivery?")
-
-if question1 == "a":
-	print "Correct! Good job!"
-else:
-	print (wrong_answers['mkdir'])
-
-
-question2 = raw_input("Does echo a) increase your computer volume, or b) print some arguments?")
-
-if question2 == "b":
-	print "Correct! Good job!"
-else:
-	print (wrong_answers['echo'])
+    if question == answer:
+            print "Correct! Good job!"
+    else:
+            print (wrong_answers[command])
 
 
-question3 = raw_input("Does cat a) call a category, or b) prints the whole file?")
+ask("Does mkdir a) create a new directory, or b) make a delivery?",
+    "a",
+    "mkdir")
 
-if question3 == "b":
-	print "Correct! Good job!"
-else:
-	print (wrong_answers['cat'])
+ask("Does echo a) increase your computer volume, or b) print some arguments?",
+    "b",
+    "echo")
 
+ask("Does cat a) call a category, or b) prints the whole file?",
+    "b",
+    'cat')
 
-question4 = raw_input("Does cd mean a) change directory, or b) compact disc?")
+ask("Does cd mean a) change directory, or b) compact disc?",
+    "a",
+    'cd')
 
-if question4 == "a":
-	print "Correct! Good job!"
-else:
-	print (wrong_answers['cd'])
+ask("Does ls mean a) lost system, or b) list directory?",
+    "b",
+    'ls')
 
+ask("Does pwd mean a) password, or b) print working directory?",
+    "b",
+    'pwd')
 
-question5 = raw_input("Does ls mean a) lost system, or b) list directory?")
+ask("Does xargs mean a) delete the arguments, or b) execute the arguments?",
+    "b",
+    'xargs')
 
-if question5 == "b":
-	print "Correct! Good job!"
-else:
-	print (wrong_answers['ls'])
+ask("Does hostname mean a) the computer's network name, or b) the encrypted wifi name?",
+    "a",
+    'xargs')
 
+ask("Does rmdir mean a) repair directory, or b) remove directory?",
+    "b",
+    'rmdir')
 
-question6 = raw_input("Does pwd mean a) password, or b) print working directory?")
-
-if question6 == "b":
-	print "Correct! Good job!"
-else:
-	print (wrong_answers['pwd'])
-
-
-question7 = raw_input("Does xargs mean a) delete the arguments, or b) execute the arguments?")
-
-if question7 == "b":
-	print "Correct! Good job!"
-else:
-	print (wrong_answers['xargs'])
-
-
-question8 = raw_input("Does hostname mean a) the computer's network name, or b) the encrypted wifi name?")
-
-if question8 == "a":
-	print "Correct! Good job!"
-else:
-	print (wrong_answers['xargs'])
-
-
-question9 = raw_input("Does rmdir mean a) repair directory, or b) remove directory?")
-
-if question9 == "b":
-	print "Correct! Good job!"
-else:
-	print (wrong_answers['rmdir'])
-
-
-question10 = raw_input("Does man mean a) manipulate the variable, or b) read a manual page?")
-
-if question10 == "b":
-	print "Correct! Good job!"
-else:
-	print (wrong_answers['man'])
+ask("Does man mean a) manipulate the variable, or b) read a manual page?",
+    "b",
+    'man')
 
 print "Thank you for playing " + answer + "!"
 

@@ -81,7 +81,7 @@ if len(answer) > 0:
 total = 0
 correct = 0
 for item in info.keys():
-	total += 1
+    total += 1
     if ask(item):
     	correct += 1
 

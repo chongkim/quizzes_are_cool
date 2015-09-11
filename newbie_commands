@@ -62,6 +62,9 @@ info = {
       },
     }
 
+def shuffle(a):
+  return random.sample(a, len(a))
+
 def ask(command):
     data = info[command]
     question = raw_input(info[command]['prompt'] + ' ')
@@ -72,16 +75,8 @@ def ask(command):
             print info[command]['wrong_answer']
 
 
-ask('mkdir')
-ask('echo' )
-ask('xargs')
-ask('cat')
-ask('pwd')
-ask('ls')
-ask('cd')
-ask('hostname')
-ask('rmdir')
-ask('man')
+for item in info.keys():
+   ask(item)
 
 print "Thank you for playing " + answer + "!"
 

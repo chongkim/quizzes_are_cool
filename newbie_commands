@@ -1,14 +1,5 @@
 #!/usr/bin/env python
 
-print "Welcome to Programming Commands for Newbies!"
-print "Learning these commands will make programming easy and fun!"
-print "Before we begin,"
-
-answer = raw_input("what is your name? ")
-
-if len(answer) > 0:
-	print "Nice to meet you, " + answer + "!" + " Let's play!"
-
 info = {
     'mkdir': {
       'prompt': 'Does mkdir a) create a new directory, or b) make a delivery?',
@@ -71,14 +62,31 @@ def ask(command):
 
     if question == info[command]['answer']:
             print "Correct! Good job!"
+            return True
     else:
             print info[command]['wrong_answer']
+            return False
 
+#------------------------------------------------------------
 
+print "Welcome to Programming Commands for Newbies!"
+print "Learning these commands will make programming easy and fun!"
+print "Before we begin,"
+
+answer = raw_input("what is your name? ")
+
+if len(answer) > 0:
+	print "Nice to meet you, " + answer + "!" + " Let's play!"
+
+total = 0
+correct = 0
 for item in info.keys():
-   ask(item)
+	total += 1
+    if ask(item):
+    	correct += 1
 
 print "Thank you for playing " + answer + "!"
+print "You have " + str(correct) +  "/" + str(total)
 
 
 
